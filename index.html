@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<!--設定html-->
+<head>
+  <meta charset="UTF-8">
+  <title>欸，今天晚餐吃什麼?</title>
+  <!--設定分頁上面那個窗要顯示甚麼-->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <!--匯入開源地圖leaflet-->
+
+  <link rel="stylesheet" href="css/index/base.css">
+  <link rel="stylesheet" href="css/index/cover.css">
+  <link rel="stylesheet" href="css/index/sidebar.css">
+  <link rel="stylesheet" href="css/index/toolbar.css">
+  <link rel="stylesheet" href=css/index/toolbar-phone.css?v=3">
+
+  <!--手機開幹-->
+  <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+</head>
+
+<body>
+<div id="Container">
+
+  <div id="Cover">
+    <h1>我的地圖網站</h1>
+    <button id="Enterbtn" type="button">
+      進入
+    </button>
+  </div>
+
+  <div id="Intro" class="Hidden">
+    <div class="Introcontent">
+
+      <h1>
+        歡迎來到食物地圖
+      </h1>
+
+      <p class="Introtext">這是一張食物地圖
+主要著重在北高雄
+抽籤機制幫忙解決不知道吃什麼的困擾
+可以用地區、類型、收藏
+來控制抽籤內容</p>
+
+      <p class="Highlighttext">
+        所以——
+      </p>
+
+      <p class="Highlighttext">
+        欸，你今天晚餐吃什麼？
+      </p>
+
+      <button id="Entermapbtn" type="button">
+        進入地圖
+      </button>
+
+    </div>
+  </div>
+
+  <div id="Sidebar" class="Hidden"></div>
+
+  <div
+  id="Toolbar"
+  class="Toolbar"
+  style="display: none;"
+>
+  <div class="Topbar">
+
+    <div class="Selectwrapper">
+      <button
+        id="AreaTogglebtn"
+        class="Areaselect"
+        type="button"
+      >
+        選擇地區 ▼
+      </button>
+
+      <div
+        id="Areafilter"
+        class="Areadropdown Hidden"
+      >
+        <label>
+          <input
+            type="checkbox"
+            value="all"
+            checked
+          >
+          全部地區
+        </label>
+      </div>
+    </div>
+
+    <div class="Selectwrapper">
+      <button
+        id="KindTogglebtn"
+        class="Areaselect"
+        type="button"
+      >
+        全部類型 ▼
+      </button>
+
+      <div
+        id="Kindfilter"
+        class="Areadropdown Hidden"
+      ></div>
+    </div>
+
+    <button
+      id="Golotterybtn"
+      type="button"
+    >
+      🎲 今天晚餐吃什麼?
+    </button>
+
+    <button
+      id="Showfavoritesbtn"
+      type="button"
+    >
+      ⭐ 只看收藏
+    </button>
+
+    <button
+      id="Resetmapbtn"
+      type="button"
+    >
+      📍 回到原點
+    </button>
+
+  </div>
+</div>
+
+  <div id="Map"></div>
+
+</div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script src="data(js)/place(r).js"></script>
+  <script src="data(js)/place(d).js"></script>
+  <script src="data(js)/icon.js"></script>
+  <script src="data(js)/index/map.js"></script>
+  <script src="data(js)/index/toolbar/favorite.js"></script>
+  <script src="data(js)/index/toolbar/selectplace.js"></script>
+  <script src="data(js)/index/sidebar.js"></script>
+  <script src="data(js)/lottery/remarker.js"></script>
+  <script src="data(js)/index/marker.js"></script>
+  <script src="data(js)/index/cover.js"></script>
+  <script src="data(js)/index/sidebar.js"></script>
+</body>
+</html>
