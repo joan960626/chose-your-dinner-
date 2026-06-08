@@ -1,0 +1,244 @@
+/* =========================
+   封面頁外層
+========================= */
+
+#Cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+  background: #357bd8;
+
+  z-index: 9999;
+
+  transition: opacity 0.5s;
+}
+
+
+/* =========================
+   封面標題
+========================= */
+
+#Cover h1 {
+  margin-bottom: 10px;
+
+  font-size: 42px;
+}
+
+
+/* =========================
+   封面進入按鈕
+========================= */
+
+#Enterbtn {
+  margin-top: 20px;
+
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #357bd8;
+  background: white;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#Enterbtn:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   功能介紹頁外層
+========================= */
+
+#Intro {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  z-index: 9500;
+
+  transition: opacity 0.5s;
+}
+
+#Intro.Hidden {
+  display: none;
+}
+
+
+/* =========================
+   功能介紹卡片
+========================= */
+
+.Introcontent {
+  position: relative;
+
+  width: min(90%, 520px);
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 40px 32px 110px;
+
+  border-radius: 28px;
+
+  background: white;
+
+  box-shadow:
+    0 12px 36px
+    rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   功能介紹標題
+========================= */
+
+.Introcontent h1 {
+  margin: 0 0 28px;
+
+  font-size: 32px;
+  font-weight: 800;
+
+  color: #222;
+}
+
+
+/* =========================
+   功能介紹內文
+   white-space: pre-line 讓 HTML 換行生效
+========================= */
+
+.Introtext {
+  max-width: 420px;
+
+  margin: 0;
+
+  white-space: pre-line;
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: #444;
+}
+
+
+/* =========================
+   功能介紹強調文字
+========================= */
+
+.Highlighttext {
+  margin: 18px 0 0;
+
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.5;
+
+  color: #222;
+}
+
+
+/* =========================
+   功能介紹進入地圖按鈕
+========================= */
+
+#Entermapbtn {
+  margin-top: 28px;
+
+  padding: 14px 34px;
+
+  border: none;
+  border-radius: 999px;
+
+  font-size: 18px;
+  font-weight: 900;
+
+  color: white;
+  background: #ff6b57;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px
+    rgba(255, 107, 87, 0.35);
+
+  transition: 0.2s;
+}
+
+#Entermapbtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px
+    rgba(255, 107, 87, 0.45);
+}
+
+#Entermapbtn:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================
+   手機版微調
+========================= */
+
+@media (max-width: 768px) {
+  #Cover h1 {
+    font-size: 34px;
+  }
+
+  .Introcontent {
+    width: 88%;
+    min-height: 72vh;
+
+    padding: 32px 24px 96px;
+  }
+
+  .Introcontent h1 {
+    font-size: 28px;
+  }
+
+  .Introtext {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .Highlighttext {
+    font-size: 21px;
+  }
+
+  #Entermapbtn {
+    margin-top: 24px;
+
+    padding: 13px 30px;
+
+    font-size: 16px;
+  }
+}
